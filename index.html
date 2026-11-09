@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Deciary Privacy Policy</title>
 <meta name="description" content="How Deciary, the private decision diary by Homebound Labs, handles your data.">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;800&display=swap" rel="stylesheet">
@@ -29,7 +31,9 @@
     font: 16px/1.65 Figtree, system-ui, -apple-system, "Segoe UI", sans-serif;
   }
   main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
-  .eyebrow { color: var(--muted); font-size: 14px; font-weight: 500; margin: 0 0 6px; }
+  .brand { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; }
+  .brand img { width: 36px; height: 36px; border-radius: 9px; }
+  .eyebrow { color: var(--muted); font-size: 14px; font-weight: 500; margin: 0; }
   h1 { color: var(--ink); font-size: clamp(32px, 7vw, 44px); line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 12px; }
   h1 .dot { color: var(--accent); }
   .meta { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
@@ -50,7 +54,7 @@
 </head>
 <body>
 <main>
-  <p class="eyebrow">Deciary · by Homebound Labs</p>
+  <div class="brand"><img src="icon.png" alt="" width="36" height="36"><p class="eyebrow">Deciary · by Homebound Labs</p></div>
   <h1>Privacy policy<span class="dot">.</span></h1>
   <p class="meta">Last updated 9 November 2026. Covers the Deciary Android app, made by Homebound Labs, India.</p>
 
