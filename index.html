@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deciary Privacy Policy</title>
+<meta name="description" content="How Deciary, the private decision diary by Homebound Labs, handles your data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --canvas: #f2f1ec; --surface: #ffffff; --ink: #161616; --body: #3d3d3a; --muted: #6f6e69;
+    --line: #e3e1da; --accent: #c2185b; --tint: #ebe9e2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --canvas: #121211; --surface: #1d1d1b; --ink: #f2f1ec; --body: #d4d2cb; --muted: #9a9890;
+      --line: #2e2e2b; --accent: #f06292; --tint: #262624;
+    }
+  }
+  :root[data-theme="dark"] {
+    --canvas: #121211; --surface: #1d1d1b; --ink: #f2f1ec; --body: #d4d2cb; --muted: #9a9890;
+    --line: #2e2e2b; --accent: #f06292; --tint: #262624;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--canvas); color: var(--body);
+    font: 16px/1.65 Figtree, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
+  .eyebrow { color: var(--muted); font-size: 14px; font-weight: 500; margin: 0 0 6px; }
+  h1 { color: var(--ink); font-size: clamp(32px, 7vw, 44px); line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 12px; }
+  h1 .dot { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+  .lead {
+    background: var(--surface); border-radius: 24px; padding: 22px 22px; margin: 0 0 28px;
+    color: var(--ink); font-size: 18px; font-weight: 600; line-height: 1.5;
+  }
+  section { background: var(--surface); border-radius: 24px; padding: 6px 22px; margin: 0 0 14px; }
+  .item { padding: 16px 0; border-top: 1px solid var(--line); }
+  .item:first-child { border-top: 0; }
+  h2 { color: var(--ink); font-size: 17px; font-weight: 600; margin: 0 0 4px; }
+  p { margin: 0 0 8px; } p:last-child { margin-bottom: 0; }
+  ol { margin: 6px 0 0; padding-left: 20px; } li { margin: 0 0 8px; }
+  strong { color: var(--ink); font-weight: 600; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 28px; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Deciary · by Homebound Labs</p>
+  <h1>Privacy policy<span class="dot">.</span></h1>
+  <p class="meta">Last updated 9 November 2026. Covers the Deciary Android app, made by Homebound Labs, India.</p>
+
+  <p class="lead">Deciary keeps your letters on your phone. Nothing about you or your letters leaves it unless you choose to send a letter to cloud AI, and then only the words you see in the preview.</p>
+
+  <section>
+    <div class="item"><h2>What Deciary stores</h2>
+      <p>Your letters, settings and optional PIN are stored only in Deciary's private storage on your phone. Letters are kept in one encrypted file. Android cloud backup is switched off for Deciary, so they are not copied to any cloud.</p></div>
+    <div class="item"><h2>Accounts</h2>
+      <p>There are none. Deciary never asks for your name, email or phone number. The name on your diary cover stays on your phone.</p></div>
+    <div class="item"><h2>When Deciary uses the internet</h2>
+      <p>Only for two things, each after you tap:</p>
+      <ol>
+        <li><strong>Downloading the on-device AI model.</strong> If you tap "Download" in Settings, Deciary downloads Qwen3 1.7B (about 1 GB) from Hugging Face. It's a plain file request: no letter, setting or identifier is sent with it. Like any website, Hugging Face can see that a download was made from your internet address.</li>
+        <li><strong>Cloud AI, for Deciary Plus subscribers.</strong> "Challenge me harder" and "Deep look" send letters to Claude, an AI made by Anthropic. You first see a preview of the exact words, and nothing leaves until you tap Send. What's sent: the text of the letter or letters you chose (what you were deciding, your choice, what you expected, why, how sure you were, your mood and, for opened letters, what happened), with email addresses, links and long numbers masked on your phone. Dates are sent as the month only, and letters are labelled L1, L2… instead of their real ids. Your Google Play subscription token is sent so the server can check your subscription with Google.</li>
+      </ol></div>
+    <div class="item"><h2>What happens to what you send</h2>
+      <p>It travels over an encrypted connection to Deciary's server, which passes it to Anthropic's Claude API and returns the answer to your phone.</p>
+      <p>Deciary's server doesn't store or log your letters or Claude's answers. It keeps only a count of how many times each subscription used cloud AI this month, under a one-way code made from the subscription token. That count is deleted automatically after about 40 days.</p>
+      <p>Anthropic processes the text only to produce the answer, under its commercial terms: it doesn't use it to train AI models, and deletes it after a short period (currently 30 days) unless it must keep it longer for safety or legal reasons. Anthropic may process it outside India.</p>
+      <p>A copy of exactly what you sent, and your last deep look, stay encrypted on your phone (Settings → sent to cloud AI) and are removed by "delete everything".</p></div>
+  </section>
+
+  <section>
+    <div class="item"><h2>AI on your phone</h2>
+      <p>Deciary's everyday AI runs on your phone: Gemini Nano, provided by Android on phones that have it, or the downloaded Qwen model. It reads the letter you're writing to ask you questions, and your letters never leave the phone for it. You can switch it off in Settings, or remove the downloaded model.</p></div>
+    <div class="item"><h2>Subscriptions</h2>
+      <p>Deciary Plus is bought and managed through Google Play. Deciary never sees your card or Google account details. There's no Deciary account.</p></div>
+    <div class="item"><h2>Backups</h2>
+      <p>A backup is a file you choose to create, encrypted with a password you set. Where you keep it is up to you; Deciary never uploads it.</p></div>
+    <div class="item"><h2>Analytics, ads and tracking</h2>
+      <p>None. Deciary has no analytics, no advertising and no crash reporting that sends data. The cloud server logs only error types (for example "timeout"), never letter text.</p></div>
+  </section>
+
+  <section>
+    <div class="item"><h2>Children</h2>
+      <p>Deciary isn't made for children under 13.</p></div>
+    <div class="item"><h2>Deleting your data</h2>
+      <p>Settings → backup and restore → delete everything removes all letters and settings from the phone. Uninstalling Deciary does the same, including the downloaded model.</p></div>
+    <div class="item"><h2>Changes</h2>
+      <p>If this policy changes, the new version will be published at this address with its date.</p></div>
+    <div class="item"><h2>Contact</h2>
+      <p>Homebound Labs · <a href="mailto:homeboundlabs@gmail.com">homeboundlabs@gmail.com</a></p></div>
+  </section>
+
+  <footer>© 2026 Homebound Labs</footer>
+</main>
+</body>
+</html>
