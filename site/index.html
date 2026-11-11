@@ -20,7 +20,7 @@
   --r:28px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{margin:0;background:var(--paper);color:var(--body);font:17px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -152,7 +152,7 @@ section{padding:96px 0;position:relative}
 .choices{display:flex;gap:8px}
 .choices button{flex:1;border:0;background:var(--ink);color:#fff;border-radius:999px;padding:11px 0;font:700 15px Figtree,sans-serif;cursor:pointer;transition:transform .15s}
 .choices button:hover{transform:translateY(-2px);background:var(--pink)}
-.stampd{position:absolute;right:14px;top:14px;border:4px solid var(--pink);color:var(--pink);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:20px;padding:6px 12px;border-radius:10px;transform:rotate(12deg) scale(0);opacity:0;background:rgba(255,253,246,.8)}
+.stampd{position:absolute;right:-12px;top:-22px;border:4px solid var(--pink);color:var(--pink);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:20px;padding:6px 12px;border-radius:10px;transform:rotate(12deg) scale(0);opacity:0;background:#FFFDF6}
 .stampd.on{animation:stamp2 .45s cubic-bezier(.3,1.7,.5,1) forwards}
 @keyframes stamp2{from{transform:rotate(12deg) scale(2.6);opacity:0}to{transform:rotate(12deg) scale(1);opacity:1}}
 .after{font-size:14px;color:var(--muted);margin:14px 0 0;display:none}
@@ -247,6 +247,13 @@ footer .sp{margin-left:auto}
   .hero .bird{right:8px;width:126px}
   .bubble-note{width:160px;font-size:18px}
   .say{max-width:170px}
+}
+@media (max-width:380px){
+  .nav{padding:0 12px}
+  .nav-in{gap:8px;padding-left:14px}
+  .brand{font-size:19px}
+  .btn.small{padding:9px 13px;font-size:13px}
+  .wrap{padding:0 16px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
