@@ -126,9 +126,9 @@ section{padding:96px 0;position:relative}
 .try h2{color:#fff}
 .try .eyebrow{color:#A9ABA8}
 .desk{position:relative;min-height:440px;display:grid;place-items:center}
-.letter{width:min(100%,400px);background:#FFFDF6;color:var(--ink);border-radius:8px;padding:26px 26px 22px;transform:rotate(-1.5deg);box-shadow:0 30px 50px -24px #000;background-image:repeating-linear-gradient(transparent 0 35px,#E4E0D2 35px 36px);background-position:0 30px;transition:transform .7s cubic-bezier(.6,0,.2,1),opacity .5s}
+.letter{width:min(100%,400px);background:#FFFDF6;color:var(--ink);border-radius:8px;padding:26px 26px 22px;transform:rotate(-1.5deg);box-shadow:0 30px 50px -24px #000;transition:transform .7s cubic-bezier(.6,0,.2,1),opacity .5s}
 .letter label{display:block;font-size:13px;font-weight:700;color:var(--muted);text-transform:lowercase;background:#FFFDF6;width:max-content;padding-right:8px}
-.letter textarea{width:100%;border:0;background:transparent;resize:none;font:400 22px/36px Kalam,cursive;color:var(--ink);height:108px;padding:0;margin-top:2px;outline:none}
+.letter textarea{width:100%;border:0;background:repeating-linear-gradient(transparent 0 34px,#E4E0D2 34px 35px,transparent 35px 36px) local;resize:none;font:400 22px/36px Kalam,cursive;color:var(--ink);height:108px;padding:0;margin-top:2px;outline:none}
 .letter textarea::placeholder{color:#A7A493}
 .sure{display:flex;align-items:center;gap:12px;margin-top:8px;font-weight:700;font-size:15px;background:#FFFDF6;padding:6px 0}
 .sure input{flex:1;accent-color:var(--pink);height:28px}
@@ -236,7 +236,14 @@ footer .sp{margin-left:auto}
   .steps,.verdicts,.pgrid{grid-template-columns:1fr 1fr}
   .step:nth-child(n){transform:none}
   .try,.private,.plus{padding:44px 22px;border-radius:32px}
-  .try .bird{width:84px;right:14px;top:14px}
+  .try{gap:10px}
+  .desk{min-height:0;padding-top:96px;place-items:start center;padding-bottom:8px}
+  .try .bird{width:88px;right:6px;top:8px}
+  .letter{transform:rotate(-.6deg)}
+  .sealed-view,.open-view{inset:96px 0 0 0;place-items:start center}
+  .desk.sealed,.desk.opened{min-height:440px}
+  .stampd{right:6px;top:-16px;font-size:17px}
+  .open-card{transform:none}
   .split .stage2{height:560px}
   .flight{display:none}
 }
