@@ -252,11 +252,19 @@ footer .sp{margin-left:auto}
 }
 @media (max-width:520px){
   .steps,.verdicts,.pgrid{grid-template-columns:1fr}
-  .sticky{right:0;width:150px;font-size:16px}
-  .hero .env{width:120px;left:0}
-  .hero .bird{right:8px;width:126px}
-  .bubble-note{width:156px;font-size:17px;left:auto;right:-2px;top:auto;bottom:78px;transform:rotate(4deg);border-radius:20px 20px 4px 20px}
-  .say{max-width:170px}
+  /* phones: only what fits inside the margins, nothing tilted past the edge */
+  .sticky{display:none}
+  .stage{height:540px}
+  .split .stage2{height:540px}
+  .blob{inset:70px 26px 50px 26px;animation:none}
+  .hero .phone{transform:translateX(-50%) rotate(2deg);animation:none}
+  .split .phone{transform:translateX(-50%) rotate(-2deg)}
+  .hero .bird{right:14px;top:-30px;width:116px}
+  .hero .say{right:70%;max-width:150px}
+  .hero .env{width:112px;left:8px;bottom:70px;transform:rotate(-8deg)}
+  .bubble-note{width:150px;font-size:16px;left:auto;right:8px;top:auto;bottom:84px;transform:rotate(2deg);border-radius:20px 20px 4px 20px}
+  .tape{transform:none;margin:10px 0 0}
+  .end .say{left:auto;right:60%;border-radius:16px 16px 4px 16px;transform-origin:100% 100%;max-width:150px}
 }
 @media (max-width:380px){
   .nav{padding:0 12px}
